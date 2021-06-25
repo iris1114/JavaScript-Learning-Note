@@ -10,5 +10,3 @@ description: 因為記憶力很差，想要把學習到的紀錄起來，變成�
 
 * Introduced animals into the world, we believe they're going to be a neat addition.
 
-
-

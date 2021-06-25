@@ -217,7 +217,7 @@ $ date
 [https://zh.wikipedia.org/wiki/Vim](https://zh.wikipedia.org/wiki/Vim)  
 [http://happystreet.com.tw/index.php/system-dynamic-teaching/unix-linux/178-a-day-of-school-a-unix-command-less](http://happystreet.com.tw/index.php/system-dynamic-teaching/unix-linux/178-a-day-of-school-a-unix-command-less)  
 [https://www.itread01.com/content/1545977108.html](https://www.itread01.com/content/1545977108.html)  
- [https://www.ctomczyk.pl/zsh-command-not-found-wget-macos/910/](https://www.ctomczyk.pl/zsh-command-not-found-wget-macos/910/)
+[https://www.ctomczyk.pl/zsh-command-not-found-wget-macos/910/](https://www.ctomczyk.pl/zsh-command-not-found-wget-macos/910/)
 
 
 

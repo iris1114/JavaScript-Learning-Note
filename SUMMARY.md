@@ -4,5 +4,9 @@
 
 ## The Basics
 
-* [Command Line Basics](the-basics/command-line-basics.md)
+* [Command Line 基本指令](the-basics/command-line-basics.md)
+
+---
+
+* [Data Type](data-type.md)
 

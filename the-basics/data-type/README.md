@@ -2,7 +2,7 @@
 
 當我們在宣告變數賦值時，都有可能賦予不同類型的值，比如是數字、字串、true 等等，這些就是屬於不同的資料型別。  
   
-在最新的 ECMAScript 標準定義了七種資料型別，主要可以分成基本型別 \(Primitives\) 與物件型別 \(Object\) 兩大類。 而基本型別又分成 `string`、`number`、`boolean`、`null`、`undefined` ，除了上述幾種之外，都可以歸類至物件型別 \(Object\)。  
+在最新的 ECMAScript 標準定義了七種資料型別，主要可以分成基本型別 \(Primitives\) 與物件型別 \(Object\) 兩大類。 而基本型別又分成 `string`、`number`、`boolean`、`null`、`undefined` ，除了上述幾種之外，其他都可以歸類至物件型別 \(Object\)。  
 
 
 ## 1. String

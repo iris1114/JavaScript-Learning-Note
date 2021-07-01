@@ -80,6 +80,27 @@ let s2 = Symbol();
 s1 === s2;
 ```
 
+## \* typeof 
+
+用來正確地檢驗運算元的型別。
+
+```text
+ var a = 3;
+  console.log(typeof a);  //  number
+  
+  var b = "Hello";
+  console.log(typeof b);  //  string
+  
+  var c = {};
+  console.log(typeof c);  //  object
+  
+  var d = [];
+  console.log(typeof d);  //  object
+  
+  var e = false;
+  console.log(typeof e);  //  boolean
+```
+
 ##  \* **Difference between null and undefined**
 
 undefined and null are equal in value but different in type**.**
@@ -90,11 +111,8 @@ typeof null // object
 
 null === undefined // false
 null == undefined // true
+
 ```
-
-
-
-## 
 
 是說，看了 wesbos 文章，他用了 SNOB'N'US 來記憶這 7 種資料型態， 想說什麼意思， 查了才知道原來 snob 意思。  
   
@@ -112,7 +130,10 @@ snob =&gt;  A snob is someone that is really arrogant. They think highly of them
 [https://wesbos.com/javascript/01-the-basics/types-introduction](https://wesbos.com/javascript/01-the-basics/types-introduction)  
 [https://ithelp.ithome.com.tw/articles/10190873](https://ithelp.ithome.com.tw/articles/10190873)  
 [https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Grammar\_and\_types](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types)  
-[https://www.fooish.com/javascript/ES6/Symbol.html](https://www.fooish.com/javascript/ES6/Symbol.html)
+[https://www.fooish.com/javascript/ES6/Symbol.html](https://www.fooish.com/javascript/ES6/Symbol.html)  
+[https://pjchender.blogspot.com/2016/07/javascript-typeof.html](https://pjchender.blogspot.com/2016/07/javascript-typeof.html)
+
+
 
 
 

@@ -142,6 +142,8 @@ String(false) // 'false'
 | [trim\(\)](https://www.w3schools.com/jsref/jsref_trim_string.asp) | Removes whitespace from both ends of a string |
 | [valueOf\(\)](https://www.w3schools.com/jsref/jsref_valueof_string.asp) | Returns the primitive value of a String object |
 
+## 參考資料
+
 [https://www.fooish.com/javascript/string/](https://www.fooish.com/javascript/string/)  
 [https://wesbos.com/javascript/01-the-basics/types-strings](https://wesbos.com/javascript/01-the-basics/types-strings)  
 [https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global\_Objects/String](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)

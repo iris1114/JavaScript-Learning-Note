@@ -134,6 +134,8 @@ console.log(`Each kid gets ${eachKidGets}`);
 window.location = `https://${0.1 + 0.2}.com`;
 ```
 
+## 參考資料
+
   
 [https://developer.mozilla.org/zh-TW/docs/Glossary/Number](https://developer.mozilla.org/zh-TW/docs/Glossary/Number)  
 [https://www.fooish.com/javascript/number/](https://www.fooish.com/javascript/number/)  

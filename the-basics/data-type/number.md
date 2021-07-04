@@ -33,10 +33,60 @@ console.log(typeof -Infinity); //number
 
 ## NaN \(Not a Number\)
 
+NaN 是 JavaScript 一個 global 的屬性，表示一個值是非數值。
+
+```javascript
+const x = 10 / "dog";
+console.log(x) //NaN
+
+console.log(typeof NaN); //number
+```
+
+JavaScript 還有一個 global function `isNaN` 來讓看可以判段一個值是不是 NaN。例如：
+
+```javascript
+isNaN(NaN);       // true
+isNaN(undefined); // true
+isNaN({});        // true
+
+isNaN(true);      // false
+isNaN(null);      // false
+isNaN(20);        // false
+```
+
+
+
+###  <a id="things-to-know-about-math-in-javascript"></a>
+
+## Number\(\) 函數 - 型別轉換
+
+Number\(\) 可以用來將其他的資料型態轉型 \(type conversion\) 成數值型態。
+
+#### 字串轉數字 <a id="&#x5B57;&#x4E32;&#x8F49;&#x6578;&#x5B57;"></a>
+
+```text
+Number('3.14') // 3.14
+Number('100')  // 100
+Number(' ')    // 0
+Number('')     // 0
+Number('a123') // NaN
+```
+
+#### 布林值轉數字 <a id="&#x5E03;&#x6797;&#x503C;&#x8F49;&#x6578;&#x5B57;"></a>
+
+```text
+Number(false) // 0
+Number(true)  // 1
+```
+
+
+
 
 
 
 
   
-[https://developer.mozilla.org/zh-TW/docs/Glossary/Number](https://developer.mozilla.org/zh-TW/docs/Glossary/Number)
+[https://developer.mozilla.org/zh-TW/docs/Glossary/Number](https://developer.mozilla.org/zh-TW/docs/Glossary/Number)  
+[https://www.fooish.com/javascript/number/](https://www.fooish.com/javascript/number/)  
+[https://wesbos.com/javascript/01-the-basics/types-numbers](https://wesbos.com/javascript/01-the-basics/types-numbers)
 

@@ -9,7 +9,7 @@
 
 字串會用 `' '` \(單引號\) 或 `" "` \(雙引號\) 包夾住，兩者不可混用。單引號和雙引號在 JavaScript 使用上是沒有差異的。
 
-```text
+```javascript
 let carName1 = "Volvo XC60";   // Using double quotes
 let carName2 = 'Volvo XC60';   // Using single quotes
 ```
@@ -18,7 +18,7 @@ let carName2 = 'Volvo XC60';   // Using single quotes
 
 數值， 可用整數、帶有小數點的浮點數，極大或極小值也可以用指數來表示。
 
-```text
+```javascript
 var x1 = 34.0 // Written with decimals
 var x2 = 34 // Written without decimals
 var y = 123e5 // 12300000
@@ -29,7 +29,7 @@ var z = 123e-5 // 0.00123
 
 由大括弧`{}`包住 key: value ，value 可以是任何資料型態，可以是string, number, 也可以是 function。除了object 外， 其他型別都屬於基本型別 \(Primitives\) 。
 
-```text
+```javascript
 var person = { firstName: 'John', lastName: 'Doe', age: 50, eyeColor: 'blue' }
 ```
 
@@ -37,7 +37,7 @@ var person = { firstName: 'John', lastName: 'Doe', age: 50, eyeColor: 'blue' }
 
 布林， 就只有兩個值， true 與 false。
 
-```text
+```javascript
 let x = 5;
 let y = 5;
 let z = 6;
@@ -49,7 +49,7 @@ let z = 6;
 
 空值，`null` 型別只有一種值，就是 `null` 。 因為 JavaScript 有區分大小寫， null 與  `Null`, `NULL`  都是不同的。有趣的是， null 的 data type 是 object。
 
-```text
+```javascript
 var person = { firstName: 'John', lastName: 'Doe', age: 50, eyeColor: 'blue' }
 person = null // Now value is null, but type is still an object
 ```
@@ -58,7 +58,7 @@ person = null // Now value is null, but type is still an object
 
 `undefined` 類型也只有一種值，就是 `undefined`。當變數 `x`被宣告時，在沒有給變數任何數值的情況下，變數的預設值會是 `undefined`。
 
-```text
+```javascript
 var x; //create a variable but assign it no value
 
 console.log("x's value is", x) //logs "x's value is undefined"
@@ -68,7 +68,7 @@ console.log("x's value is", x) //logs "x's value is undefined"
 
 **是 ES6 的新型別， 是用來**表示獨一無二 \(unique\) 的值。在 ES5 中，object 的屬性 \(property\) 只能是字串，如果你要幫一個 object 添加新的屬性，很容易會造成名稱衝突，Symbol 就是用來解決這件事情的。也就是說，object property name 現在可以有兩種型態 - 字串和 Symbol。
 
-```text
+```javascript
 let s1 = Symbol();
 
 // "symbol"
@@ -84,7 +84,7 @@ s1 === s2;
 
 用來正確地檢驗運算元的型別。
 
-```text
+```javascript
  var a = 3;
   console.log(typeof a);  //  number
   
@@ -105,7 +105,7 @@ s1 === s2;
 
 undefined and null are equal in value but different in type**.**
 
-```text
+```javascript
 typeof undefined // undefined
 typeof null // object
 

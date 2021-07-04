@@ -54,13 +54,11 @@ isNaN(null);      // false
 isNaN(20);        // false
 ```
 
-
-
 ## Number Operators 數字運算
 
 可以直接使用+ - \* / 對數字進行運算，但要特別注意的是資料型態。
 
-```text
+```javascript
 const a = 20;
 const b = 10;
 
@@ -80,7 +78,7 @@ Number\(\) 可以用來將其他的資料型態轉型 \(type conversion\) 成數
 
 #### 字串轉數字 <a id="&#x5B57;&#x4E32;&#x8F49;&#x6578;&#x5B57;"></a>
 
-```text
+```javascript
 Number('3.14') // 3.14
 Number('100')  // 100
 Number(' ')    // 0
@@ -90,12 +88,10 @@ Number('a123') // NaN
 
 #### 布林值轉數字 <a id="&#x5E03;&#x6797;&#x503C;&#x8F49;&#x6578;&#x5B57;"></a>
 
-```text
+```javascript
 Number(false) // 0
 Number(true)  // 1
 ```
-
-
 
 ## Others
 
@@ -130,7 +126,7 @@ console.log(`Each kid gets ${eachKidGets}`);
 
 如果在 avaScript 執行 0.1+0.2 , 則會回傳 0.30000000004 。這跟浮點數的二進制存儲有關。 有興趣也可以到 [https://0.30000000000000004.com](https://0.30000000000000004.com/) 查看解釋。
 
-```text
+```javascript
 window.location = `https://${0.1 + 0.2}.com`;
 ```
 

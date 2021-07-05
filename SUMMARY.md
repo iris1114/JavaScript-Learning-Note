@@ -12,3 +12,7 @@
   * [Object 物件](the-basics/data-type/object-wu-jian.md)
   * [Null and Undefined](the-basics/data-type/null-and-undefined.md)
 
+## Functions
+
+* [Functions - Built-in](functions/functions-built-in.md)
+

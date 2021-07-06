@@ -5,7 +5,6 @@
 ## The Basics
 
 * [Command Line 基本指令](the-basics/command-line-basics.md)
-* [Untitled](the-basics/untitled.md)
 * [JavaScript 資料型別](the-basics/data-type/README.md)
   * [Booleans and Equality](the-basics/data-type/booleans-and-equality.md)
   * [String 字串](the-basics/data-type/untitled.md)

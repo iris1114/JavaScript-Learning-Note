@@ -19,7 +19,7 @@ Boolean 用來表示兩種值：
 
 Boolean\(\) 可以用來將其他的資料型態轉型 \(type conversion\) 成布林值型態。
 
-```text
+```javascript
 var x = 0;
 Boolean(x); // false
 x = 100;
@@ -38,7 +38,7 @@ Boolean(x); // false
 
 最簡單的一個等於 = ， 當我們宣告變數賦值時所使用。
 
-```text
+```javascript
 const age = 100;
 ```
 

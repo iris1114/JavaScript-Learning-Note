@@ -4,11 +4,9 @@ JavaScript 有內建物件之外，也有內建函式，下面來紀錄常使用
 
 
 
-1. **parseInt\(\) : 將字串轉為整數**
+## **parseInt\(\) : 將字串轉為整數**
 
-**語法：** 
-
-```text
+```javascript
 parseInt(string, radix);
 ```
 
@@ -36,7 +34,8 @@ parseInt("0x10") //16
 parseInt("10", 16)  //16
 ```
 
-1. 
+
+
 ```text
 
 ```

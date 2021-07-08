@@ -3,7 +3,6 @@
 JavaScript 有內建物件之外，也有內建函式，下面來紀錄常使用的內建函式。
 
 
-
 ## **parseInt\(\) : 將字串轉為整數**
 
 ```javascript
@@ -20,7 +19,7 @@ parseInt(string, radix);
 
 不過還是建議加radix, 可以加個10。 
 
-```text
+```javascript
 parseInt("10") //10
 parseInt("10.33")  //10
 parseInt("34 45 66") //34
@@ -34,11 +33,10 @@ parseInt("0x10") //16
 parseInt("10", 16)  //16
 ```
 
+## **parseFloat() : 將字串轉為整數**
 
+* 函數解析一個字符串並返回一個浮點數
 
-```text
-
-```
 
 1. eval\(\) : 是把一串字串，當作一般 script 來進行計算。 語法： `eval(string)`
 

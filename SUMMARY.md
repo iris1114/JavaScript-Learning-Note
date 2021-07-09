@@ -15,4 +15,8 @@
 ## Functions
 
 * [Functions - Built-in](functions/functions-built-in.md)
+* [Debugging Tools](functions/debugging-tools.md)
+* [Functions - Custom](functions/functions-custom.md)
+* [Functions - Parameters and Arguments](functions/functions-parameters-and-arguments.md)
+* [Different Ways to Declare Functions](functions/different-ways-to-declare-functions.md)
 

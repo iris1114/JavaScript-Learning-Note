@@ -1,8 +1,60 @@
-# JavaScript 資料型別
+# 變數的資料型別
 
-當我們在宣告變數賦值時，都有可能賦予不同類型的值，比如是數字、字串、true 等等，這些就是屬於不同的資料型別。  
+1.變數本身不帶有資料型態，只有值和物件才有。  
   
-在最新的 ECMAScript 標準定義了七種資料型別，主要可以分成基本型別 \(Primitives\) 與物件型別 \(Object\) 兩大類。 而基本型別又分成 `string`、`number`、`boolean`、`null`、`undefined` ，除了上述幾種之外，其他都可以歸類至物件型別 \(Object\)。  
+2. 當我們在宣告變數賦值時，都可以賦予不同資料型別的值。
+
+```javascript
+const a = 1; 
+//1 屬於 number 型別
+
+const b = 'hello'; 
+//"hello" 屬於 string 型別
+
+const x = true; 
+//true 屬於 string 型別
+```
+
+3. 最新的 ECMAScript 標準定義了七種資料型別：  
+`string`、`number`、`object`、`boolean`、`null`、`undefined` 、`symbol` 
+
+4. 資料型別主要可以分成基本型別 \(Primitives\) 與物件型別 \(Object\) 兩大類。
+
+5. 基本型別 \(Primitives\) 包含了:   
+`string`、`number`、`boolean`、`null`、`undefined` 、`symbol`   
+  
+6. 其他則歸類在物件型別 \(Object\) ， 如 `object` 。  
+  
+7. 可以使用 `typeof` 來判斷資料型別。
+
+```javascript
+typeof  true;         // 'boolean'
+typeof  'test';       // 'string'
+typeof  123;          // 'number'
+typeof  { };          // 'object'
+typeof  [ ];          // 'object'
+typeof  undefined;    // 'undefined'
+```
+
+  
+8. 但`typeof`有些回傳跟我們想像的不一樣，特別注意 null，會回傳 object 。
+
+```javascript
+typeof window.alert;  // 'function'
+typeof null;          // 'object'
+```
+
+  
+9. 看了 wesbos 文章，他用了 SNOB'N'US 來記憶這 7 種資料型態。SNOB'N'US  \(勢力的人與我們\)，好像突然有好記一點，面試的時候也許能排上用場 。  
+
+
+## 參考資料
+
+[https://ithelp.ithome.com.tw/articles/10190873?sc=rss.qu](https://ithelp.ithome.com.tw/articles/10190873?sc=rss.qu)  
+[https://wesbos.com/javascript/01-the-basics/types-introduction](https://wesbos.com/javascript/01-the-basics/types-introduction)
+
+
+
 
 
 ## 1. String

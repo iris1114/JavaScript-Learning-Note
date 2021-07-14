@@ -1,5 +1,55 @@
 # String 字串
 
+1. 字串會用 `' '` \(單引號\) 或 `" "` \(雙引號\) 包夾住，兩者不可混用。
+
+2. 單引號和雙引號在 JavaScript 使用上是沒有差異的。
+
+```javascript
+const carName1 = "Volvo XC60";   //使用雙引號
+const carName2 = 'Volvo XC60';   //使用單引號
+```
+
+3. 在了解字串的一些特性前，先介紹樣板字面值（Template literals）。是ES6 新增的特殊字串，他允許嵌入運算式、多行字串及字串內插（string interpolation）功能。他由反引號``` ``` 字元封閉，代替了雙或單引號。樣板字面值除了字串，也包含錢字元 `$` 及花括號`{}`所組成， 這個特性增加了字串處理的便利性。
+
+```javascript
+const carName3 = `Volvo XC60`;
+```
+
+  
+4. 若要在單引號內包覆單引號，或是雙引號內包覆雙引號就會出現問題：
+
+```javascript
+const str1 = 'Mike's pet.';  //error
+```
+
+我們可以這樣改，雙引號裡面可以有單引號，或單引號裡面可以有雙引號。  
+或是用跳脫字元 \(escape character\) 反斜線 \(backslash\) `\`。  
+或是樣板字面值反引號``` ```來解決。
+
+```javascript
+const str1 = "Mike's pet.";  // 雙引號裡面可以有單引號 Mike's pet.
+const str2 = 'Mike\'s pet.'; // 跳脫字元反斜線 Mike's pet.
+const str3 = `Mike's pet.`;  // 板字面值反引號 Mike's pet.
+```
+
+
+
+5. 字串相加   
+遇到了多組的字串時，你可以用 `+` \(加號\) 來連接字串。
+
+```javascript
+const name = "iris";
+const hello = "hello my name is" + name + ". Nice to meet you.";
+console.log(hello); //"hello my name is iris.  Nice to meet you.
+```
+
+  
+5. 多行字串
+
+有如果想要換行，可以使用   `\` 或是```````` 樣板字串進行換行。
+
+## 
+
 ## 創建字串 reate Strings
 
 有三種方法可以創建字串  

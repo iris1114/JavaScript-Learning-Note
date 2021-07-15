@@ -1,22 +1,28 @@
-# Number
+# number 數字
 
-在 JavaScript, **Number** 是[雙精度64位浮點格式\(IEEE 754\)](http://en.wikipedia.org/wiki/Double_precision_floating-point_format)中的數字數據類型。在其他編程語言中可以存在不同的數字類型，如：整型\(Integers\)、浮點型\(Floats\)、雙精度型\(Doubles\)、 或 大數型\(Bignums\).
+## 1. Number 簡介
+
+在 JavaScript 只有一種數值的型別，就是 `number`。不管整數或帶有小數點的數字都是 number 。是[雙精度64位浮點格式\(IEEE 754\)](http://en.wikipedia.org/wiki/Double_precision_floating-point_format)中的數字數據類型。  
+  
+另外還有幾種特殊的數字：  
+`Infinity` \(無限大\) 、 `-Infinity` \(負無限大\) ，以及 `NaN` \(不是數值，Not a Number\)。  
+  
+極大或極小值可以用科學記號表示法\(scientific \(exponent\) notation\)來表示。
 
 ```javascript
-const x = 180;
-const y = 0.25;
+var x1 = 34.0 // Written with decimals
+var x2 = 34 // Written without decimals
+var y = 123e5 // 12300000
+var z = 123e-5 // 0.00123
 ```
 
-也可以用科學記號表示法 \(scientific \(exponent\) notation\)：
 
-```javascript
-const x = 101e5;  // 10100000
-const y = 101e-5; // 0.00101
-```
 
-## Infinity and Negative Infinity
+## 2. Infinity and Negative Infinity
 
-`Infinity` 或 `-Infinity` 是 JavaScript 一個 global 的屬性，表示無限大或無限小。 可以使用\*\* 來乘以雙倍， 如 `10 ** 2` 會回傳100 ， `1000**2`  則回傳 1000000 。 不管是是無限大或無限小，資料型態都屬於  。
+`Infinity` 或 `-Infinity` 是 JavaScript 一個 global 的屬性，表示無限大或無限小。一個正數除以 0，結果會得到是 `Infinity`，而任何負數除以 0 會得到 `-Infinity`。  
+  
+可以使用\*\* 來乘以雙倍， 如 `10 ** 2` 會回傳100 ， `1000**2`  則回傳 1000000 。 不管是是無限大或無限小，資料型態都屬於  number。
 
 ```javascript
 
@@ -31,9 +37,9 @@ console.log(typeof Infinity); //number
 console.log(typeof -Infinity); //number
 ```
 
-## NaN \(Not a Number\)
+## 3. NaN \(Not a Number\)
 
-NaN 是 JavaScript 一個 global 的屬性，表示一個值是非數值。
+NaN 是 JavaScript 一個 global 的屬性，表示一個值是非數字。
 
 ```javascript
 const x = 10 / "dog";
@@ -41,6 +47,19 @@ console.log(x) //NaN
 
 console.log(typeof NaN); //number
 ```
+
+NaN 與任何數字作數學運算，結果都是 NaN。 也就是說， NaN 並不等於任何的數字，甚至是自己。
+
+```javascript
+NaN === NaN;    // false
+```
+
+如果 `0 / 0` 會得到什麼呢？ 結果會得到 `NaN` 。  
+甚至是 `Infinity / Infinity` 或 `-Infinity / -Infinity` 同樣地也會得到 `NaN`。
+
+
+
+## 4. `isNaN`
 
 JavaScript 還有一個 global function `isNaN` 來讓看可以判段一個值是不是 NaN。例如：
 
@@ -54,7 +73,9 @@ isNaN(null);      // false
 isNaN(20);        // false
 ```
 
-## Number Operators 數字運算
+從中我比較好奇的是為什麼 `isNaN(null) == false` ，後來查了才知道，因為 `null`轉換為數字0\(嘗試評估`Number(null)`並檢視其返回0，\)，而`isNaN(0)`返回false。
+
+## 5. Number Operators 數字運算
 
 可以直接使用+ - \* / 對數字進行運算，但要特別注意的是資料型態。
 
@@ -136,5 +157,6 @@ window.location = `https://${0.1 + 0.2}.com`;
 [https://developer.mozilla.org/zh-TW/docs/Glossary/Number](https://developer.mozilla.org/zh-TW/docs/Glossary/Number)  
 [https://www.fooish.com/javascript/number/](https://www.fooish.com/javascript/number/)  
 [https://wesbos.com/javascript/01-the-basics/types-numbers](https://wesbos.com/javascript/01-the-basics/types-numbers)  
-[https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global\_Objects/Number](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number)
+[https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global\_Objects/Number](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number)  
+[https://www.796t.com/post/MTlwOGM=.html](https://www.796t.com/post/MTlwOGM=.html)
 

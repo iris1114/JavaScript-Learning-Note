@@ -1,22 +1,29 @@
 # String 字串
 
-1. 字串會用 `' '` \(單引號\) 或 `" "` \(雙引號\) 包夾住，兩者不可混用。
+## 1. 創建字串 
 
-2. 單引號和雙引號在 JavaScript 使用上是沒有差異的。
+字串會用 `' '` \(單引號\) 或 `" "` \(雙引號\) 包夾住，兩者不可混用。單引號和雙引號在 JavaScript 使用上是沒有差異的。
 
 ```javascript
 const carName1 = "Volvo XC60";   //使用雙引號
 const carName2 = 'Volvo XC60';   //使用單引號
 ```
 
-3. 在了解字串的一些特性前，先介紹樣板字面值（Template literals）。是ES6 新增的特殊字串，他允許嵌入運算式、多行字串及字串內插（string interpolation）功能。他由反引號``` ``` 字元封閉，代替了雙或單引號。樣板字面值除了字串，也包含錢字元 `$` 及花括號`{}`所組成， 這個特性增加了字串處理的便利性。
+
+
+## 2.  **樣板字面值（Template literals）**
+
+在了解字串的一些特性前，先介紹樣板字面值（Template literals）。是ES6 新增的特殊字串，他允許嵌入運算式、多行字串及字串內插（string interpolation）功能。他由反引號``` ``` 字元封閉，代替了雙或單引號。樣板字面值除了字串，也包含錢字元 `$` 及花括號`{}`所組成， 這個特性增加了字串處理的便利性。
 
 ```javascript
 const carName3 = `Volvo XC60`;
 ```
 
-  
-4. 若要在單引號內包覆單引號，或是雙引號內包覆雙引號就會出現問題：
+
+
+## 3. 特殊字元
+
+若要在單引號內包覆單引號，或是雙引號內包覆雙引號就會出現問題：
 
 ```javascript
 const str1 = 'Mike's pet.';  //error
@@ -24,7 +31,7 @@ const str1 = 'Mike's pet.';  //error
 
 我們可以這樣改，雙引號裡面可以有單引號，或單引號裡面可以有雙引號。  
 或是用跳脫字元 \(escape character\) 反斜線 \(backslash\) `\`。  
-或是樣板字面值反引號``` ```來解決。
+或是 ES6 樣板字面值反引號``` ```來解決。
 
 ```javascript
 const str1 = "Mike's pet.";  // 雙引號裡面可以有單引號 Mike's pet.
@@ -34,110 +41,64 @@ const str3 = `Mike's pet.`;  // 板字面值反引號 Mike's pet.
 
 
 
-5. 字串相加   
-遇到了多組的字串時，你可以用 `+` \(加號\) 來連接字串。
+## 4. 字串相加 、字串內插 
+
+遇到了多組的字串時，你可以用 `+` \(加號\) 來連接字串。  
+或是使用 ES6 樣板字面值`${}` 來內插字串。
 
 ```javascript
 const name = "iris";
-const hello = "hello my name is" + name + ". Nice to meet you.";
-console.log(hello); //"hello my name is iris.  Nice to meet you.
+const hello1 = "hello my name is" + name + ". Nice to meet you."; 
+const hello2 = `hello my name is ${name}. Nice to meet you.`; 
+
+console.log(hello1); //"hello my name is iris.  Nice to meet you.
+console.log(hello2); //"hello my name is iris.  Nice to meet you.
 ```
 
+
+
+## 5. 多行字串
+
+如果在 JavaScript 中， 因為字串太長，為了方便閱讀想要換行，可以使用   `\`  ，`\` 反斜線符號後面不能有任何東西，包括空白字元。  
   
-5. 多行字串
-
-有如果想要換行，可以使用   `\` 或是```````` 樣板字串進行換行。
-
-## 
-
-## 創建字串 reate Strings
-
-有三種方法可以創建字串  
-  
-1. 單引號 'text'  
-2. 雙引號 "text"  
-3. 反引號 \`text\`
+但如果 output 是要呈現多行，則是使用 \n 進行換行。  
+或是使用```````` 樣板字串直接折行，也能達到進行換行效果。
 
 ```javascript
-const singleQuotes = 'hello';
-const doubleQuotes = "my";
-const backticks = `friend`;
+console.log('string text line 1 \
+string text line 2');  
+// string text line 1 string text line 2
+ 
+ console.log('string text line 1\n' +
+'string text line 2');
+// string text line 1
+// string text line 2
+ 
+console.log(`string text line 1
+string text line 2`);
+// string text line 1
+// string text line 2
 ```
 
-## 特殊字元 Special Characters
 
-因為字串必須包在單引號或雙引號裡面，但是要特別注意的雙引號裡面不能有雙引號、單引號裡面不能有單引號。
 
-會發生錯誤：
+## 6. 嵌入運算式
+
+前面有提到 ES6 樣板字面值可以嵌入運算式， 可直接在 `${}` 內進行運算。
 
 ```javascript
-const str1 = 'Mike's pet.'; //error
-const str2 = "This is a "book"."; //error
+const a = 5;
+const b = 10;
+console.log(`a + b = ${a + b}`); // a + b = 15
 ```
 
-可以這樣改，雙引號裡面可以有單引號，或單引號裡面可以有雙引號。  
-或是 用跳脫字元 \(escape character\) 反斜線 \(backslash\) `\`，來跳脫引號
+
+
+## 7. String\(\) 函數 - 型別轉換
+
+數字轉字串
 
 ```javascript
-const str1 = "Mike's pet.";   // Mike's pet.
-varconst str1 str = 'This is a "book".';   //This is a "book".
-var str = 'Mike\'s pet.';    // Mike's pet
-var str = "This is a \"book\".";   // This is a "book".
-```
-
-## 字串相加 \(String Concatenation\) / 字串內插 （String Interpolation）
-
-我們可以用 `+` 和 `+=` 運算子來將多個字串接起來變成一個。
-
-```javascript
-const name = "iris";
-const hello = "hello my name is" + name + ". Nice to meet you.";
-console.log(hello); //"hello my name is iris.  Nice to meet you.
-```
-
-我們也可以使用反引號穿插 name 的值。
-
-```javascript
-const name = 'iris';
-const hello = `hello my name is ${name}. Nice to meet you`;
-```
-
-## 多行字串 / 換行  Putting String on Multiple Lines
-
-有如果想要換行，可以使用   `\` 或是```````` 樣板字串進行換行。
-
-```javascript
-const song = 'Ohhh\
-\
-ya\
-\
-I like\
-\
-pizza';
-```
-
-```javascript
-const song = `Ohhh
-ya
-I like
-pizza`;
-```
-
-```````` 樣板字串是不是更方便呢？  如果有時候需要修改 HTML 內容元素，也可以```````` 樣板字串。
-
-```javascript
-const html = `
-  <div>
-    <h2></h2>
-  </div>
-`;
-```
-
-## String\(\) 函數 - 型別轉換
-
-#### 數字轉字串 <a id="&#x6578;&#x5B57;&#x8F49;&#x5B57;&#x4E32;"></a>
-
-```text
 String(123) // '123'
 String(100 + 23) // '123'
 
@@ -145,16 +106,16 @@ var x = 123;
 String(x) // '123
 ```
 
-#### 布林值轉字串
+布林值轉字串
 
-```text
+```javascript
 String(true) // 'true'
 String(false) // 'false'
 ```
 
 
 
-## String 物件內建的屬性 \(Properties\) 
+## 8. String 物件內建的屬性 \(Properties\) 
 
 | Property | Description |
 | :--- | :--- |
@@ -162,7 +123,9 @@ String(false) // 'false'
 | [length](https://www.w3schools.com/jsref/jsref_length_string.asp) | Returns the length of a string |
 | [prototype](https://www.w3schools.com/jsref/jsref_prototype_string.asp) | Allows you to add properties and methods to an object |
 
-## String 物件內建的方法 \(Methods\)
+
+
+## 9. String 物件內建的方法 \(Methods\)
 
 | Method | Description |
 | :--- | :--- |
@@ -194,7 +157,9 @@ String(false) // 'false'
 
 ## 參考資料
 
+[https://ithelp.ithome.com.tw/articles/10190873](https://ithelp.ithome.com.tw/articles/10190873)  
 [https://www.fooish.com/javascript/string/](https://www.fooish.com/javascript/string/)  
 [https://wesbos.com/javascript/01-the-basics/types-strings](https://wesbos.com/javascript/01-the-basics/types-strings)  
-[https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global\_Objects/String](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)
+[https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global\_Objects/String](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)  
+
 

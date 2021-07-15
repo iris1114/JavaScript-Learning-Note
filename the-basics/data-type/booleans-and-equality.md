@@ -1,5 +1,7 @@
 # Booleans and Equality
 
+## 1. Boolean 簡介
+
 Boolean 用來表示兩種值：
 
 1. `true` - 表示真
@@ -15,7 +17,7 @@ Boolean 用來表示兩種值：
 
 除此以外的值都是 true！
 
-## Boolean\(\) 函數 - 型別轉換 <a id="boolean-&#x51FD;&#x6578;---&#x578B;&#x5225;&#x8F49;&#x63DB;"></a>
+## 2. Boolean\(\) 函數 - 型別轉換 <a id="boolean-&#x51FD;&#x6578;---&#x578B;&#x5225;&#x8F49;&#x63DB;"></a>
 
 Boolean\(\) 可以用來將其他的資料型態轉型 \(type conversion\) 成布林值型態。
 
@@ -34,7 +36,7 @@ x = null;
 Boolean(x); // false
 ```
 
-## Equality \(equal sign, double equal sign, triple equal sign = / == / ===\) 
+## 3. Equality \(equal sign, double equal sign, triple equal sign = / == / ===\) 
 
 最簡單的一個等於 = ， 當我們宣告變數賦值時所使用。
 

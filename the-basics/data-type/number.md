@@ -61,7 +61,7 @@ NaN === NaN;    // false
 
 ## 4. `isNaN`
 
-JavaScript 還有一個 global function `isNaN` 來讓看可以判段一個值是不是 NaN。例如：
+與其他 JavaScript 的值不同，你不可能靠等號運算符（== 與 ===）來判斷某個值是不是 [`NaN`](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN)，因為連 `NaN == NaN` 與 `NaN === NaN` 的結果都是 `false`。因此，`isNaN` 函式是必要的。：
 
 ```javascript
 isNaN(NaN);       // true
@@ -73,7 +73,9 @@ isNaN(null);      // false
 isNaN(20);        // false
 ```
 
-從中我比較好奇的是為什麼 `isNaN(null) == false` ，後來查了才知道，因為 `null`轉換為數字0\(嘗試評估`Number(null)`並檢視其返回0，\)，而`isNaN(0)`返回false。
+從中我比較好奇的是為什麼 `isNaN(null) == false` ，後來查了才知道，因為 `null`轉換為數字0\(嘗試評估`Number(null)`並檢視其返回0，\)，而`isNaN(0)`則返回false。  
+  
+結論，會先將 `x` 轉換成數字類型 → `.isNaN(Number(x))`，再進行比對是否為 `NaN`
 
 ## 5. Number Operators 數字運算
 
@@ -93,11 +95,24 @@ console.log("10" + 100);  //10100
 
 ```
 
-## Number\(\) 函數 - 型別轉換
+## 6.  執行0.1 + 0.2 === 0.3
 
-Number\(\) 可以用來將其他的資料型態轉型 \(type conversion\) 成數值型態。
+值得一提的是，跟多數其他程式語言一樣的問題是，JavaScript 的 number 實作是基於「IEEE 754」二進位浮點數算術標準 ，所以當你執行 `0.1 + 0.2 === 0.3` 的時候，你會得到 `false` 的結果。  
+  
+那會回傳什麼呢？ 執行 0.1+ 0.2 , 則會回傳 0.30000000004 。這跟浮點數的二進制存儲有關。 有興趣也可以到 [https://0.30000000000000004.com](https://0.30000000000000004.com/) 或 [重新認識 JavaScript ](https://ithelp.ithome.com.tw/articles/10190873)查看解釋。
 
-#### 字串轉數字 <a id="&#x5B57;&#x4E32;&#x8F49;&#x6578;&#x5B57;"></a>
+```javascript
+window.location = `https://${0.1 + 0.2}.com`;
+```
+
+##  7. Number\(\) 函數 - 型別轉換
+
+```javascript
+Number(false) // 0
+Number(true)  // 1
+```
+
+#### 布林值轉數字 <a id="&#x5E03;&#x6797;&#x503C;&#x8F49;&#x6578;&#x5B57;"></a>
 
 ```javascript
 Number('3.14') // 3.14
@@ -107,16 +122,11 @@ Number('')     // 0
 Number('a123') // NaN
 ```
 
-#### 布林值轉數字 <a id="&#x5E03;&#x6797;&#x503C;&#x8F49;&#x6578;&#x5B57;"></a>
+#### 字串轉數字 <a id="&#x5B57;&#x4E32;&#x8F49;&#x6578;&#x5B57;"></a>
 
-```javascript
-Number(false) // 0
-Number(true)  // 1
-```
+Number\(\) 可以用來將其他的資料型態轉型 \(type conversion\) 成數值型態。
 
-## Others
-
-### Helper Methods <a id="helper-methods"></a>
+## 8. Helper Methods
 
 我們時常會用到的Math內建函數來應用在數字上，其中比較常用的有:
 
@@ -143,13 +153,7 @@ const eachKidGets = Math.floor(smarties / kids);
 console.log(`Each kid gets ${eachKidGets}`);
 ```
 
-### Things to know about Math in JavaScript <a id="things-to-know-about-math-in-javascript"></a>
-
-如果在 avaScript 執行 0.1+0.2 , 則會回傳 0.30000000004 。這跟浮點數的二進制存儲有關。 有興趣也可以到 [https://0.30000000000000004.com](https://0.30000000000000004.com/) 查看解釋。
-
-```javascript
-window.location = `https://${0.1 + 0.2}.com`;
-```
+###  <a id="things-to-know-about-math-in-javascript"></a>
 
 ## 參考資料
 
@@ -158,5 +162,6 @@ window.location = `https://${0.1 + 0.2}.com`;
 [https://www.fooish.com/javascript/number/](https://www.fooish.com/javascript/number/)  
 [https://wesbos.com/javascript/01-the-basics/types-numbers](https://wesbos.com/javascript/01-the-basics/types-numbers)  
 [https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global\_Objects/Number](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number)  
-[https://www.796t.com/post/MTlwOGM=.html](https://www.796t.com/post/MTlwOGM=.html)
+[https://www.796t.com/post/MTlwOGM=.html](https://www.796t.com/post/MTlwOGM=.html)  
+[https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global\_Objects/isNaN](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/isNaN)
 

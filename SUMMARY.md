@@ -5,13 +5,14 @@
 ## The Basics
 
 * [變數](the-basics/bian-shu.md)
-* [變數的資料型別](the-basics/data-type/README.md)
+* [Data Type 變數的資料型別](the-basics/data-type/README.md)
   * [Booleans and Equality](the-basics/data-type/booleans-and-equality.md)
   * [String 字串](the-basics/data-type/untitled.md)
   * [number 數字](the-basics/data-type/number.md)
   * [Object 物件](the-basics/data-type/object-wu-jian.md)
   * [Null and Undefined](the-basics/data-type/null-and-undefined.md)
 * [Command Line 基本指令](the-basics/command-line-basics.md)
+* [Array 陣列](the-basics/array-zhen-lie.md)
 
 ## Functions
 
